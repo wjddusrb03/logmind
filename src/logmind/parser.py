@@ -227,7 +227,13 @@ def parse_line(line: str, fmt: str = "auto") -> LogEntry:
         m = _FORMATS[fmt].match(line.strip())
         if m:
             groups = m.groups()
+            # Try first group for timestamp; if not found, search all groups
             ts = _parse_timestamp(groups[0]) if groups else None
+            if ts is None:
+                for g in groups[1:]:
+                    ts = _parse_timestamp(g)
+                    if ts:
+                        break
             level = _parse_level(line)
             source = _parse_source(line)
             message = groups[-1] if groups else line
