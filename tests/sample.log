@@ -1,0 +1,65 @@
+2024-03-15 10:00:01 INFO  AppServer: Application started successfully
+2024-03-15 10:00:02 INFO  DBPool: Connection pool initialized (size=50)
+2024-03-15 10:00:03 INFO  CacheManager: Redis connected at localhost:6379
+2024-03-15 10:00:10 INFO  APIHandler: GET /api/users 200 (45ms)
+2024-03-15 10:00:12 INFO  APIHandler: POST /api/login 200 (120ms)
+2024-03-15 10:00:15 DEBUG AuthService: Token validated for user_123
+2024-03-15 10:00:20 INFO  APIHandler: GET /api/products 200 (30ms)
+2024-03-15 10:00:25 INFO  APIHandler: GET /api/orders 200 (55ms)
+2024-03-15 10:00:30 INFO  HealthCheck: All systems operational
+2024-03-15 10:00:35 INFO  APIHandler: PUT /api/users/456 200 (80ms)
+2024-03-15 10:00:40 WARN  RateLimiter: Rate limit approaching for IP 192.168.1.100
+2024-03-15 10:00:45 INFO  APIHandler: GET /api/search?q=phone 200 (150ms)
+2024-03-15 10:00:50 INFO  APIHandler: DELETE /api/cart/789 200 (25ms)
+2024-03-15 10:00:55 DEBUG DBPool: Active connections: 12/50
+2024-03-15 10:01:00 INFO  HealthCheck: All systems operational
+2024-03-15 10:01:05 INFO  APIHandler: GET /api/users 200 (42ms)
+2024-03-15 10:01:10 INFO  APIHandler: POST /api/orders 201 (200ms)
+2024-03-15 10:01:15 WARN  DBPool: Connection checkout time: 500ms (slow)
+2024-03-15 10:01:20 INFO  APIHandler: GET /api/products/123 200 (35ms)
+2024-03-15 10:01:25 INFO  CacheManager: Cache hit ratio: 85%
+2024-03-15 10:01:30 INFO  HealthCheck: All systems operational
+2024-03-15 10:01:35 INFO  APIHandler: GET /api/dashboard 200 (300ms)
+2024-03-15 10:01:40 INFO  APIHandler: POST /api/feedback 201 (45ms)
+2024-03-15 10:01:45 DEBUG AuthService: Session refreshed for user_789
+2024-03-15 10:01:50 INFO  APIHandler: GET /api/notifications 200 (60ms)
+2024-03-15 10:01:55 INFO  TaskScheduler: Scheduled cleanup job completed
+2024-03-15 10:02:00 INFO  HealthCheck: All systems operational
+2024-03-15 10:02:05 INFO  APIHandler: GET /api/users 200 (40ms)
+2024-03-15 10:02:10 INFO  APIHandler: POST /api/upload 201 (1500ms)
+2024-03-15 10:02:15 WARN  MemoryMonitor: Heap usage at 72%
+2024-03-15 10:02:20 INFO  APIHandler: GET /api/reports 200 (250ms)
+2024-03-15 10:02:25 INFO  APIHandler: GET /api/settings 200 (20ms)
+2024-03-15 10:02:30 INFO  HealthCheck: All systems operational
+2024-03-15 10:02:35 INFO  APIHandler: PUT /api/profile 200 (90ms)
+2024-03-15 10:02:40 INFO  CacheManager: Cache eviction: 15 entries removed
+2024-03-15 10:02:45 INFO  APIHandler: GET /api/analytics 200 (400ms)
+2024-03-15 10:02:50 DEBUG DBPool: Active connections: 15/50
+2024-03-15 10:02:55 INFO  APIHandler: GET /api/health 200 (5ms)
+2024-03-15 10:03:00 INFO  HealthCheck: All systems operational
+2024-03-15 10:30:00 ERROR DBPool: Cannot acquire connection - pool exhausted (50/50)
+2024-03-15 10:30:01 ERROR DBPool: Connection wait timeout after 30000ms
+2024-03-15 10:30:02 ERROR APIHandler: GET /api/users 500 - Database connection failed
+2024-03-15 10:30:03 ERROR APIHandler: POST /api/orders 500 - Database connection failed
+2024-03-15 10:30:04 ERROR DBPool: Cannot acquire connection - pool exhausted (50/50)
+2024-03-15 10:30:05 ERROR APIHandler: GET /api/products 500 - Database connection failed
+2024-03-15 10:30:06 FATAL HealthCheck: Database connection failed
+2024-03-15 10:30:07 ERROR DBPool: Connection leak detected - unreturned connection from APIHandler
+2024-03-15 10:30:08 ERROR APIHandler: GET /api/dashboard 500 - Database connection failed
+2024-03-15 10:30:09 ERROR DBPool: Cannot acquire connection - pool exhausted (50/50)
+2024-03-15 10:30:10 ERROR APIHandler: POST /api/login 500 - Database connection failed
+2024-03-15 10:30:11 WARN  CircuitBreaker: Opening circuit for database service
+2024-03-15 10:30:12 ERROR APIHandler: GET /api/orders 503 - Service unavailable
+2024-03-15 10:30:13 ERROR APIHandler: GET /api/users 503 - Service unavailable
+2024-03-15 10:30:14 ERROR DBPool: All connections in use, cannot create new ones
+2024-03-15 10:30:15 FATAL AppServer: Critical - database service is down
+2024-03-15 10:30:16 ERROR APIHandler: POST /api/feedback 503 - Service unavailable
+2024-03-15 10:30:17 ERROR NotificationService: Failed to send alert email
+2024-03-15 10:30:18 ERROR APIHandler: GET /api/search 503 - Service unavailable
+2024-03-15 10:30:19 ERROR DBPool: Connection pool recovery failed
+2024-03-15 10:30:20 ERROR APIHandler: DELETE /api/cart/123 503 - Service unavailable
+2024-03-15 11:00:00 INFO  DBPool: Connection pool reset (size increased to 200)
+2024-03-15 11:00:01 INFO  AppServer: Database connection restored
+2024-03-15 11:00:02 INFO  HealthCheck: All systems operational
+2024-03-15 11:00:05 INFO  APIHandler: GET /api/users 200 (45ms)
+2024-03-15 11:00:10 INFO  APIHandler: POST /api/login 200 (100ms)
